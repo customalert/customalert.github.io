@@ -1,4 +1,9 @@
-const notifications = document.querySelector(".notifications"),
+    //Creating Toast Body
+    const toast_body = document.createElement('ul');
+    toast_body.className = `notifications`;
+    document.querySelector('body').appendChild(toast_body);
+    const notifications = document.querySelector(".notifications");
+
 const removeToast = (toast) => {
     toast.classList.add("hide");
     if(toast.timeoutId) clearTimeout(toast.timeoutId); // Clearing the timeout for the toast
@@ -6,8 +11,7 @@ const removeToast = (toast) => {
 }
 
 const Toast = (icon,text,timer) => {
-    // Getting the icon and text for the toast based on the id passed
-    // const { icon, text } = toastDetails[id];
+    // Creatig Toast
     const toast = document.createElement("li"); // Creating a new 'li' element for the toast
     toast.className = `toast ${icon}`; // Setting the classes for the toast
     // Setting the inner HTML for the toast
