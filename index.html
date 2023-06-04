@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomAlert | TalhaBD</title>
     <link rel="stylesheet" href="customalert.css">
-    <link rel="shortcut icon" href="https://talhabd06.blogspot.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <script src="customalert.js" defer></script>
   </head>
   <body>
     <div class="buttons">
-      <button class="btn" id="success" onclick="javascript:Toast('success','Success: This is a success toast.','5000')">Success</button>
-      <button class="btn" id="error" onclick="javascript:Toast('error','Error: This is an error toast.','5000')">Error</button>
-      <button class="btn" id="warning" onclick="javascript:Toast('warning','Warning: This is a warning toast.','5000')">Warning</button>
-      <button class="btn" id="info" onclick="javascript:Toast('info','Info: This is an information toast.','5000')">Info</button>
+      <button class="btn" id="success" onclick="javascript:Toast({icon:'success',text:'Success: This is a success toast.',timer:'3000'})">Success</button>
+      <button class="btn" id="error" onclick="javascript:Toast({icon:'error',text:'Error: This is an error toast.',timer:'5000'})">Error</button>
+      <button class="btn" id="warning" onclick="javascript:Toast({icon:'warning',text:'Warning: This is a warning toast.',timer:'5000'})">Warning</button>
+      <button class="btn" id="info" onclick="javascript:Toast({icon:'info',text:'Info: This is an information toast.',timer:'5000'})">Info</button>
     </div>
 
   </body>
