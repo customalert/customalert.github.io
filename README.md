@@ -6,7 +6,7 @@ It is a bewauiful custom tost alert like SweetAlert.
 
 ## Demo
 
-https://codertalhabd.github.io/customalert/
+https://customalert.github.io#examples
 
 
 ## Installation
@@ -24,7 +24,7 @@ Under Header Tag
     
 ## Documentation
 
-[Comming Soon..](https://linktodocumentation)
+[ Click Here. ](https://customalert.github.io#intallation)
 
 
 ## Features
