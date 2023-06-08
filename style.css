@@ -1,9 +1,97 @@
-body {
+.container .example{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.container .example .vs{
+    margin-top: 100px;
+}
+.code{
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
-    min-height: 100vh;
-    background: var(--dark);
-  }
+}
+.examples code{
+    width: 500px;
+}
+.main code{
+    width: 300px;
+}
+
+.config-top{
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    background: var(--pink);
+    padding: 15px 10px;
+    color: var(--white);
+    text-align: left;
+}
+.config{
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 10px;
+    color: var(--white);
+    text-align: left;
+}
+.pram,
+.pram-desc{
+    color: var(--white);
+    text-align: left;
+    width: 50%;
+}
+.config .pram{
+    padding: 1rem;
+    color: var(--white);
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.config .pram .bg,
+.config .pram-desc .bg{
+    width: fit-content;
+    height: fit-content;
+    background: var(--white-shade);
+    padding: 2px 5px;
+    border-radius: 2.5px;
+    color: var(--pink);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* icons */
+
+.icons{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    color: var(--white);
+    text-align: left;
+}
+.icons .pram .bg,
+.icons .pram-desc .bg{
+    width: fit-content;
+    height: fit-content;
+    background: var(--white-shade);
+    padding: 2px 5px;
+    border-radius: 2.5px;
+    color: var(--pink);
+    font-weight: 400;
+    font-size: 18px;
+}
+

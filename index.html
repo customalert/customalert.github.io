@@ -3,23 +3,460 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- Title -->
     <title>CustomAlert | TalhaBD</title>
-    <link rel="stylesheet" href="customalert.css">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-    <script src="customalert.js" defer></script>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <link rel="stylesheet" href="customalert.css"> -->
+    <script src="index.js" defer></script>    
+    <!-- <script src="customalert.js" defer></script>      -->
+    <!-- CDN Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/customalert/customalert@1.2.0/customalert.css">
+    <script src="https://cdn.jsdelivr.net/gh/customalert/customalert@1.2.0/customalert.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+    
   </head>
   <body>
-    <div class="buttons">
-      <button class="btn" id="success" onclick="javascript:Toast({icon:'success',text:'Success: This is a success toast.',timer:'3000'})">Success</button>
-      <button class="btn" id="error" onclick="javascript:Toast({icon:'error',text:'Error: This is an error toast.',timer:'5000'})">Error</button>
-      <button class="btn" id="warning" onclick="javascript:Toast({icon:'warning',text:'Warning: This is a warning toast.',timer:'5000'})">Warning</button>
-      <button class="btn" id="info" onclick="javascript:Toast({icon:'info',text:'Info: This is an information toast.',timer:'5000'})">Info</button>
+
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo">
+      </div>
+    <ul>
+
+      <li><a href="#examples">Examples</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#installation">Usage</a></li>
+      <li><a href="#configuration">Configuration</a></li>
+      <li><a href="#icons">Icons</a></li>
+    </ul>
+    </header>
+
+  <main>
+    <section class="main flex-column flex-gap-3" id="main">
+
+      <div class="title">
+        <h1>Custom<span>Alert</span></h1>
+      </div>
+
+      <div class="container flex-column flex-gap-2">
+        <div class="title">
+          <h2>This Is A Best Custom Alert Notification.</h2>
+        </div>
+        <div class="description">
+          <p>
+            You Can Compare This Two Alert Which Is Best And Beautiful.
+          </p>
+        </div>
+        <div class="example flex-gap-3">
+          <div class="buttons flex-gap-1 flex-column"">
+            <button class="btn" id="success" onclick="javascript:alert('Hello World');">Normal Alert</button>
+            <div class="code">
+              <pre>
+                <code class="language-js hljs lang-js">
+alert( 'Hello World' );
+                </code>
+              </pre>
+            </div>
+          </div>
+          <span class="vs">VS</span>
+          <div class="buttons flex-gap-1 flex-column">
+            <button class="btn" id="success" onclick="javascript:Popup({icon:'success',title: 'Success',text:'Hello World'});">CustomAlert</button>
+            <div class="code">
+              <pre>
+                <code class="language-js hljs lang-js">
+Popup({
+  icon: 'success',
+  title: 'Success',
+  text: 'Hello World'
+});
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Examples -->
+
+  <section class="examples flex-column flex-gap-2" id="examples">
+
+    <div class="title">
+      <h2>Exampl<span>es</span></h2>
     </div>
-    <div class="buttons">
-      <button class="btn" id="success" onclick="javascript:popup({icon:'success',text:'Success You Clicked The Button'})">Popup</button>
-      <button class="btn" id="error" onclick="javascript:popup({icon:'error',text:'error You Clicked The Button'})">Popup</button>
-      <button class="btn" id="warning" onclick="javascript:popup({icon:'warning',text:'warning You Clicked The Button'})">Popup</button>
-      <button class="btn" id="info" onclick="javascript:popup({icon:'info',text:'info You Clicked The Button'})">Popup</button>
+
+    <div class="container flex-column flex-gap-2">
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="success" onclick="javascript:Toast({icon:'error',text:'Success: This is a success toast.',timer:'3000'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Toast({
+  icon: 'success',
+  text: 'Success: This is a success toast.',
+  timer: '5000'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="error" onclick="javascript:Toast({icon:'error',text:'Error: This is a error toast.',timer:'5000'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Toast({
+  icon: 'error',
+  text: 'Error: This is a error toast.',
+  timer: '5000'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="warning" onclick="javascript:Toast({icon:'warning',text:'Warning: This is a warning toast.',timer:'3000'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Toast({
+  icon: 'warning',
+  text: 'Warning: This is a warning toast.',
+  timer: '5000'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="info" onclick="javascript:Toast({icon:'info',text:'Info: This is a info toast.',timer:'3000'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Toast({
+  icon: 'info',
+  text: 'Info: This is a info toast.',
+  timer: '5000'
+});
+          </code>
+        </pre>
+      </div>
+
+  <div class="description">
+    <p>
+      The Popup Notifications Are Below
+    </p>
+  </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="success" onclick="javascript:Popup({icon:'success',title: 'Success!',text:'Success: This is a success popup.'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Popup({
+  icon: 'success',
+  title: 'Success!',
+  text: 'Success: This is a success popup.'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="error" onclick="javascript:Popup({icon:'error',title: 'Error',text:'Error: This is a error popup.'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Popup({
+  icon: 'error',
+  title: 'Error',
+  text: 'error: This is a error popup.'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="warning" onclick="javascript:Popup({icon:'warning',title: 'Warning!',text:'Warning: This is a warning popup.'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Popup({
+  icon: 'warning',
+  title: 'Warning!',
+  text: 'Warning: This is a warning popup.'
+});
+          </code>
+        </pre>
+      </div>
+
+      <div class="code flex-gap-5">
+        <div class="buttons">
+          <button class="btn" id="info" onclick="javascript:Popup({icon:'info',title: 'Info!',text:'Info: This is a info popup.'})">Try Me!</button>
+        </div>
+        <pre>
+          <code class="hljs language-js lang-js">
+Popup({
+  icon: 'info',
+  title: 'Info!',
+  text: 'Info: This is a info popup.'
+});
+          </code>
+        </pre>
+      </div>
     </div>
+  </section>
+
+  <!-- Installation -->
+
+  <section class="installation flex-column flex-gap-2" id="installation">
+    <div class="title">
+      <h2>Download <span>&</span> Install</h2>
+    </div>
+    <div class="container flex-column">
+      <div class="code flex-column flex-gap-1">
+        <div class="description">
+          <p>
+            Put This CDN Link To Your Website
+          </p>
+        </div>
+      <pre>
+        <code class="hljs language-xml">
+                                                              &lt!-- CustomAlert Js CDN --&gt
+&ltscript src="https://cdn.jsdelivr.net/gh/customalert/customalert@1.2.0/customalert.js" defer&gt &ltscript/&gt
+                                                              &lt!-- CustomAlert CSS CDN --&gt
+&ltlink rel="stylesheet" src="https://cdn.jsdelivr.net/gh/customalert/customalert@1.2.0/customalert.css"/&gt 
+        </code>
+      </pre>
+      </div>
+      <span class="or">
+        Or
+      </span>
+      <div class="download">
+        <div class="description">
+          <p>Download From <a href="https://github.com/customalert/customalert.github.io/releases/tag/v1.1.0" target="_blank">Github</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="configuration flex-column flex-gap-1" id="configuration">
+    <div class="title">
+      <h2>Configuration <span>&</span> Usage</h2>
+    </div>
+
+    <div class="description">
+      <p>There Are Some Configuration Of Parameters. This Helps To Call Toast Or Popup Notifications Properly.</p>
+    </div>
+
+    <div class="container flex-column flex-gap-1">
+      <div class="config-top">
+        <span class="pram">
+          Argument
+          <br>
+          (Default value)
+        </span>
+        <p class="pram-desc">
+          Description
+        </p>
+      </div>
+
+      <!-- Config -->
+
+      <div class="config">
+        <span class="pram flex-column">
+          <span class="bg">
+            title
+          </span>
+          Undefined
+        </span>
+        <p class="pram-desc">
+          This Is The Title Of Popup Notification.
+        </p>
+      </div>
+
+      <div class="config">
+        <span class="pram flex-column">
+          <span class="bg">
+            text
+          </span>
+          Undefined
+        </span>
+        <p class="pram-desc">
+          This Is The Text Of Toast Or Popup Notification.
+        </p>
+      </div>
+
+      <div class="config">
+        <span class="pram flex-column">
+          <span class="bg">
+            icon
+          </span>
+          Undefined
+        </span>
+        <p class="pram-desc" style="align-items: center; justify-content: center;">
+          The icon of the popup. CustomAlert comes with 4 built-in icon which will show a corresponding icon animation: <span class="bg">warning,</span> <span class="bg">error,</span> <span class="bg">success</span> and <span class="bg">info.</span> It can either be put in the array under the key "icon" or passed as the third parameter of the function.
+        </p>
+      </div>
+
+      <div class="config">
+        <span class="pram flex-column">
+          <span class="bg">
+            timer
+          </span>
+          Undefined
+        </span>
+        <p class="pram-desc">
+          This Is The Timer Of Toast Notification.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="icon flex-column flex-gap-1" id="icons">
+    <div class="title">
+      <h2>Icon<span>s</span></h2>
+    </div>
+
+    <div class="description">
+      <p>The icon of the popup. CustomAlert comes with 4 built-in icon which will show a corresponding icon.</p>
+    </div>
+
+    <div class="container flex-column flex-gap-2">
+
+      <div class="icons">
+        <span class="pram flex-column">
+
+          <span class="bg">
+            success
+          </span>
+
+        </span>
+
+        <div class="buttons">
+
+          <button 
+          class="btn" 
+          id="success" 
+          onclick="
+          javascript:Popup({
+            icon:'success',
+            title: 'Success!',
+            text:'Success: This is success icon.'
+            })">
+            Try Me!
+          </button>
+        
+        </div>
+      </div>
+
+      <div class="icons">
+        <span class="pram flex-column">
+
+          <span class="bg">
+            error
+          </span>
+
+        </span>
+
+        <div class="buttons">
+
+          <button 
+          class="btn" 
+          id="error" 
+          onclick="
+          javascript:Popup({
+            icon:'error',
+            title: 'Error!',
+            text:'Error: This is error icon.'
+            })">
+            Try Me!
+          </button>
+        
+        </div>
+      </div>
+
+      <div class="icons">
+        <span class="pram flex-column">
+
+          <span class="bg">
+            warning
+          </span>
+
+        </span>
+
+        <div class="buttons">
+
+          <button 
+          class="btn" 
+          id="warning" 
+          onclick="
+          javascript:Popup({
+            icon:'warning',
+            title: 'Warning!',
+            text:'Warning: This is warning icon.'
+            })">
+            Try Me!
+          </button>
+        
+        </div>
+      </div>
+
+      <div class="icons">
+        <span class="pram flex-column">
+
+          <span class="bg">
+            info
+          </span>
+
+        </span>
+
+        <div class="buttons">
+
+          <button 
+          class="btn" 
+          id="info" 
+          onclick="
+          javascript:Popup({
+            icon:'info',
+            title: 'Info!',
+            text:'Info: This is info icon.'
+            })">
+            Try Me!
+          </button>
+        
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <p class="para">
+        Copyright &COPY; <span id="year"></span> <span class="footer-logo">Custom<span>Alert</span></span> All Rights Reserved. Designed & Developed By <a href="http://talhabd06.blogspot.com/" target="_blank" rel="noopener noreferrer">MD Abu Talha Siam</a>
+      </p>
+    </footer>
+
   </body>
 </html>
