@@ -30,7 +30,6 @@ body{
 /* Header Start */
 header{
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -213,6 +212,8 @@ form button{
 pre{
     width: auto;
     height: auto;
+    max-width: 100% !important;
+    max-height: 100% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,12 +222,15 @@ pre{
 code{
     max-width: 100% !important;
     max-height: 100% !important;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
     text-align: left;
+    position: relative;
 }
 .or{
     width: 100%;
@@ -252,6 +256,7 @@ footer{
 }
 footer p{
     color: var(--white);
+    text-align: center;
 }
 footer a{
     color: var(--pink);
