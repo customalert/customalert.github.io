@@ -25,7 +25,7 @@ Under Head Tag
     
 ## Documentation
 
-[ Click Here. ](https://customalert.github.io#intallation)
+[ Click Here. ](https://customalert.github.io#installation)
 
 
 ## Features
