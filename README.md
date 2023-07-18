@@ -17,9 +17,7 @@ Under Head Tag
 
 ```bash
 <!-- CustomAlert JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/@customalert/customalert@2.0.0/dist/customalert.js" defer></script>
-<!-- CustomAlert CSS CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@customalert/customalert@2.0.0/dist/customalert.css">
+<script src="https://cdn.jsdelivr.net/npm/@customalert/customalert@2.1.0"></script>
 ```
     
 ## Documentation
