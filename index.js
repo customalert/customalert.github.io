@@ -1,3 +1,9 @@
+// loader hide
+window.onload(()=>{
+        document.getElementById('loader').style.display='none';
+    });
+
+// hljs calling
 hljs.highlightAll();
 
 // Sticky Navbar
