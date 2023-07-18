@@ -1,3 +1,17 @@
+		// Create new link Element
+		var link = document.createElement('link');
+
+		// set the attributes for link element
+		link.rel = 'stylesheet';
+	
+		link.type = 'text/css';
+	
+		link.href = 'https://cdn.jsdelivr.net/npm/@customalert/customalert/dist/customalert.css';
+
+		// Get HTML head element to append
+		// link element to it
+		document.getElementsByTagName('HEAD')[0].appendChild(link);			
+        
 const toast_body = document.createElement("ul");
 (toast_body.className = "notifications"), document.querySelector("body").appendChild(toast_body);
 const notifications = document.querySelector(".notifications"),
@@ -5,9 +19,9 @@ const notifications = document.querySelector(".notifications"),
         t.classList.add("hide"), t.timeoutId && clearTimeout(t.timeoutId), setTimeout(() => t.remove(), 500);
     },
     Toast = ({ icon: t, text: e, timer: o }) => {
-        const n = document.createElement("li");
-        const tm = 'tm'+o;
-        (n.className = `toast ${t} ${tm}`),
+        const n = document.createElement("li"),
+            i = "tm" + o;
+        (n.className = `toast ${t} ${i}`),
             (n.innerHTML = `<div class="column">\n                         <i class="${t}"></i>\n                         <span>${e}</span>\n                      </div>\n                      <i class="xmark" onclick="removeToast(this.parentElement)"></i>`),
             notifications.appendChild(n),
             (n.timeoutId = setTimeout(() => removeToast(n), o));
@@ -15,12 +29,14 @@ const notifications = document.querySelector(".notifications"),
     removePopup = (t) => {
         t.classList.add("hide"), t.timeoutId && clearTimeout(t.timeoutId), setTimeout(() => t.remove(), 500);
     },
-    Popup = ({ icon: t, title: tl, text: e }) => {
-        const o = document.createElement("div");
-        (o.className = "popup_body"),
-            document.querySelector("body").appendChild(o),
-            (o.innerHTML = `\n    <div class="popup">\n    <i class="${t}"></i>\n  <h2 class='popup-title'>\n ${tl}\n </h2>\n  <p class="text">\n      ${e}\n    </p>\n    <div class="buttons">\n      <button class="btn ok" id="info">\n        Ok\n      </button>\n    </div>\n  </div>`),
-            o.querySelector(".buttons .ok").addEventListener("click", () => {
-                removePopup(o);
+    Popup = ({ icon: t, title: e, text: o }) => {
+        const n = document.createElement("div");
+        (n.className = "popup_body"),
+            document.querySelector("body").appendChild(n),
+            (n.innerHTML = `\n    <div class="popup">\n    <i class="${t}"></i>\n  <h2 class='popup-title'>\n ${e}\n </h2>\n  <p class="text">\n      ${o}\n    </p>\n    <div class="buttons">\n      <button class="btn ok" id="info">\n        Ok\n      </button>\n    </div>\n  </div>`),
+            n.querySelector(".buttons .ok").addEventListener("click", () => {
+                removePopup(n);
             });
     };
+
+    export {Popup,Toast};
