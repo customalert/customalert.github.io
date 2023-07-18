@@ -1,24 +1,3 @@
-// hljs and hljs-copy Calling
-
-hljs.debugMode();
-hljs.addPlugin(
-  new CopyButtonPlugin({
-    hook: (text, el) => {
-      if (el.dataset.copyright) {
-        return `${text}\n\n${el.dataset.copyright}`;
-      }
-      if (el.dataset.highlight) {
-        el.style.filter = "saturate(5)";
-      }
-      if (el.dataset.replace) {
-        return text
-          .replace("{{name}}", "Alexander Graham Bell")
-          .replace("{{dog}}", "Platypus");
-      }
-      return text;
-    }
-  })
-);
 hljs.highlightAll();
 
 // Sticky Navbar
