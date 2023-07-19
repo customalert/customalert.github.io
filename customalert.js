@@ -38,5 +38,3 @@ const notifications = document.querySelector(".notifications"),
                 removePopup(n);
             });
     };
-
-    export {Popup,Toast};

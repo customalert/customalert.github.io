@@ -245,7 +245,8 @@ pre{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: left;    
+    position: relative;
 }
 code{
     max-width: 100% !important;
@@ -258,7 +259,22 @@ code{
     margin: 0;
     padding: 0;
     text-align: left;
-    position: relative;
+}
+pre:hover > .copy-btn{
+    right: 2%;
+    opacity: 1;
+}
+pre .copy-btn{
+    position: absolute;
+    right: 0%;
+    top: 2%;
+    color: var(--white);
+    background-color: var(--pink);
+    padding: .5rem;
+    font-size: 16px;
+    opacity: 0;
+    transition: all .3s ease;
+    cursor: pointer;
 }
 .or{
     width: 100%;

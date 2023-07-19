@@ -34,3 +34,31 @@ const observer = new IntersectionObserver(
   const d = new Date();
   let year = d.getFullYear();
   document.querySelector('#year').innerHTML= year;
+
+// Copy Btn Code
+
+const code = document.querySelectorAll('pre');
+
+code.forEach((a)=>{
+    const i = document.createElement('i');
+    i.className = "fa-solid fa-copy copy-btn";
+    a.appendChild(i);
+    
+    i.addEventListener('click',()=>{
+      const copyText = a.firstElementChild.innerText;
+      // console.log(copyText);
+      if(navigator.clipboard.writeText(copyText)){
+        Toast({
+          icon: 'success',
+          text: 'Text Copied!',
+          timer: '3000'
+        });
+      }else{
+        Toast({
+          icon: 'error',
+          text: 'Text Copy Failed!',
+          timer: '3000'
+        });
+      }
+    })
+});
