@@ -8,13 +8,13 @@ hljs.highlightAll();
 
 // Sticky Navbar
 
-const header = document.querySelector('header');
+const hd = document.querySelector('header');
 const observer = new IntersectionObserver(
     (entries) => {
       const ent = entries[0];
       !ent.isIntersecting
-        ? header.classList.add("sticky")
-        : header.classList.remove("sticky");
+        ? hd.classList.add("sticky")
+        : hd.classList.remove("sticky");
     },
     {
       root: null,
