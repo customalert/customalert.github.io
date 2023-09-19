@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 :root {
     --dark: #34495e;
@@ -29,12 +28,17 @@
     top: 0;
     right: 20px;
     z-index: 9999;
+    font-family: "Poppins", sans-serif !important;
+    margin-top: 10px;
 }
-.notifications :where(.toast, .column) {
+.notifications .toast,
+.notifications .column {
     display: flex;
     align-items: center;
+    font-family: "Poppins", sans-serif !important;
 }
 .notifications .toast {
+    display: flex;
     width: 400px;
     position: relative;
     overflow: hidden;
@@ -124,6 +128,7 @@ i {
     font-size: 1.5rem;
 }
 i::before {
+    content: "";
     display: inline-block;
     font-style: normal;
     font-variant: normal;
